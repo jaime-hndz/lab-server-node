@@ -1,0 +1,10 @@
+npm install express mongoose dotenv jsonwebtoken bcryptjs helmet cors fs https
+
+
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt
+
+curl -X POST -H "Content-Type: application/json" -d '{"username": "admin", "password": "123456"}' https://localhost/auth/register --insecure
+
+curl -X POST -H "Content-Type: application/json" -d {'username': 'admin', 'password': '123456'} https://localhost/auth/register --insecure
+
+curl -X POST -H "Content-Type: application/json" -d {"username": "admin", "password": "123456"} https://localhost/auth/register --insecure
